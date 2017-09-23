@@ -1,0 +1,38 @@
+html {
+
+}
+
+.window {
+  border: 5px solid #C0B283;
+  background: linear-gradient(to bottom right, #DCD0C0, #F4F4F4);
+  color: #373737;
+  width: 320px;
+  height: 500px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-item {
+  width: 300px;
+  height: 300px;
+  background-color: white;
+}
+
+.interface {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  justify-content: space-around;
+}
+
+.interface-option:hover {
+  cursor: pointer;
+}
+
+.input_box {
+  display: flex;
+  justify-content: space-around;
+}
