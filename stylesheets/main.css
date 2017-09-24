@@ -2,7 +2,10 @@ html {
 
 }
 
-
+.top-bar{
+  display: flex;
+  align-items: center;
+}
 
 .window {
   border: 5px solid black;
