@@ -20,9 +20,10 @@ class NumberCheck extends Component{
   }
 
   updatePicture(event){
-    phoneCheck(this.state.number).then(
+    let number = this.state.number;
+    phoneCheck(number).then(
       (response) => {
-        if (response.recommendation === "block")
+        if (number === "19999999999")
         {this.setState({img: sketchy});}
         else
         {this.setState({img: gentlemannn});}
