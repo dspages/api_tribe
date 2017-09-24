@@ -55,7 +55,7 @@ class ListItem extends Component{
       <img src={IMAGES[i]} alt="" height="18px" width="18px"/>
       <div className="agreement-li">
         <text>{CONTRACT_TYPES[i]}</text>
-        <input className="checkbox" onChange={this.clickHandler} type="checkbox" name={i}/>
+        <input className="checkbox" onChange={this.setForm} type="checkbox" name={i}/>
       </div>
   </div>
   );
