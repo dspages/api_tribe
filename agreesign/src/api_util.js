@@ -1,18 +1,21 @@
-
+const baseURL = 'https://api-tribe.aiwins.io/';
+const header = new Headers({
+  'Access-Control-Allow-Origin': '*',
+  'Content-Type': 'application/x-www-form-urlencoded',
+});
 
 export const phoneCheck = function(phone){
-  return fetch(`./api/phone`,
+  return fetch(`${baseURL}verify/${phone}`,
     {
+    header,
     method: 'GET',
-    body: {phone: phone}
   });
 };
 
 export const sendMail = function(email, forms){
-  return fetch(
-    `./api/mailer`,
-    {
-    method: 'POST',
-    body: {email: email, forms: forms}
+  let data = email + 'MMMM' + forms.join('MMMM')
+  console.log(data)
+  return fetch(`${baseURL}document/${data}`, { header,
+    method: 'GET',
   });
 };
