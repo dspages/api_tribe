@@ -8,6 +8,8 @@ import sketchy from './images/CAUTION.png';
 import gigsign from './images/gigsignsignsign.png';
 import {phoneCheck} from './api_util.js';
 
+
+
 class NumberCheck extends Component{
 
   constructor(){

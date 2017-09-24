@@ -3,9 +3,21 @@ import './number.css';
 import ListItem from './listitem.jsx';
 import {sendMail} from './api_util.js';
 
+import k_1 from './piano_keys/a.mp3';
+import k_2 from './piano_keys/b.mp3';
+import k_3 from './piano_keys/c.mp3';
+import k_4 from './piano_keys/d.mp3';
+import k_5 from './piano_keys/e.mp3';
+import k_6 from './piano_keys/f.mp3';
+import k_7 from './piano_keys/g.mp3';
+
+const SOUNDS = [k_1,k_2,k_3,k_4,k_5,k_6,k_7];
+
 const DEFAULT_STATE = {selected:
   [false, false, false, false, false, false, false],
   email: ""};
+
+
 
 class Contract extends Component{
   constructor(){
@@ -22,6 +34,8 @@ class Contract extends Component{
     let bool = !selected[target];
     selected[parseInt(event.target.name)] = bool;
     this.setState({selected: selected});
+    var audio = new Audio(SOUNDS[target]);
+    audio.play();
   }
 
   changeEmail(event){
