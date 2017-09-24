@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Route, Switch, HashRouter } from 'react-router-dom';
+import Splash from "./splash";
+import Num from "./number.jsx";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to AgreeSign</h2>
-        </div>
-        <p className="App-intro">
-        </p>
+        <HashRouter>
+          <Switch>
+            <Route path="/begin" component={Num} />
+            <Route path="/" component={Splash} />
+          </Switch>
+        </HashRouter>
       </div>
     );
   }
