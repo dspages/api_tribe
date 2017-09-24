@@ -26,6 +26,8 @@ html {
 .window {
   border: 5px solid black;
   background: linear-gradient(to bottom right, #836036, #A38046);
+  background-image: url("./images/gigsignsignsign.png");
+  background-size: 100% 100%;
   color: black;
   width: 320px;
   height: 500px;

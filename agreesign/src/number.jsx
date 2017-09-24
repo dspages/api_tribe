@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 import question from './images/question.png';
 import gentlemannn from './images/gentlemannn.png';
 import sketchy from './images/sketchy.png';
-
+import gigsign from './images/gigsignsignsign.png';
+import {phoneCheck} from './api_util.js';
 
 class NumberCheck extends Component{
 
@@ -17,7 +18,15 @@ class NumberCheck extends Component{
   }
 
   updatePicture(event){
-    this.setState({img: gentlemannn});
+    phoneCheck(this.state.number).then(
+      (response) => {
+        if (response === "safe")
+        {this.setState({img: gentlemannn});}
+        else
+        {this.setState({img: sketchy});}
+      }
+    );
+
   }
 
   updateNumber(event){
