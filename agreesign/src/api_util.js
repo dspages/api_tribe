@@ -1,17 +1,18 @@
 
 
 export const phoneCheck = function(phone){
-  return $.ajax({
+  return fetch(`./api/phone`,
+    {
     method: 'GET',
-    url: `./api/phone`,
     data: {phone: phone}
   });
 };
 
 export const sendMail = function(email, forms){
-  return $.ajax({
+  return fetch(
+    `./api/mailer`,
+    {
     method: 'POST',
-    url: `./api/mailer`,
     data: {email: email, forms: forms}
   });
 };

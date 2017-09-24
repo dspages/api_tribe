@@ -6,11 +6,12 @@ import question from './images/question.png';
 import gentlemannn from './images/gentlemannn.png';
 import sketchy from './images/sketchy.png';
 
+
 class NumberCheck extends Component{
 
   constructor(){
     super();
-    this.state = {img: question};
+    this.state = {img: question, number: ""};
     this.updatePicture = this.updatePicture.bind(this);
     this.updateNumber = this.updateNumber.bind(this);
   }
@@ -20,22 +21,21 @@ class NumberCheck extends Component{
   }
 
   updateNumber(event){
-
+    this.setState({number: event.target.value});
   }
 
   render(){
     return (
       <div className="window">
         <div className="top-bar">
-          AgreeSign App
+          GigSign App
         </div>
         <div className="content-item">
           <img src={this.state.img} alt="" height="300px" width="300px"/>
         </div>
         <div className="input-box">
-          <label> Phone Number
-          <input type="text"></input>
-          </label>
+          <text className="input-label"> Phone Number</text>
+          <input type="text" onChange={this.updateNumber}></input>
         </div>
         <div className="interface">
           <button className="interface-option" onClick={this.updatePicture}>
