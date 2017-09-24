@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import './number.css';
+import { Link } from 'react-router-dom';
 
 class NumberCheck extends Component{
   render(){
@@ -13,17 +14,19 @@ class NumberCheck extends Component{
           <img src="./logo2.png" alt="" height="300px" width="300px"/>
         </div>
         <div className="input-box">
-          <label> Phone Number 
+          <label> Phone Number
           <input type="text"></input>
           </label>
         </div>
         <div className="interface">
           <button className="interface-option">
-            Reject
+            Check number!
           </button>
-          <button className="interface-option">
-            Move forward
-          </button>
+          <Link to={`/document`}>
+            <button className="interface-option">
+              Move forward
+            </button>
+          </Link>
         </div>
       </div>
     );
