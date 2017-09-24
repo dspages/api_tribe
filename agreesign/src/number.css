@@ -2,11 +2,22 @@ html {
 
 }
 
+.input-label{
+  padding-right: 5px;
+}
+
 .agreement-li{
   display: flex;
   justify-content: space-between;
   width: 280px;
+  margin-left: 10px;
 }
+
+.li-and-icon{
+  display: flex;
+  flex-direction: row;
+}
+
 
 .top-bar{
   display: flex;

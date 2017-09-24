@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './number.css';
 import ListItem from './listitem.jsx';
+import {sendMail} from './api_util.js';
 
 const DEFAULT_STATE = {selected:
   [false, false, false, false, false, false, false],
@@ -30,6 +31,12 @@ class Contract extends Component{
   sendForm(event){
     console.log(`
       sending form type ${this.state.selected} to ${this.state.email}`);
+      sendMail(this.state.email,this.state.selected).then(
+        ()=>{
+          console.log("Mail sent!");
+          this.props.history.push("./conclude");
+        }
+      );
   }
 
   render(){
@@ -48,7 +55,7 @@ class Contract extends Component{
       <div className="window">
         {listItems}
         <div>
-          <text>Email</text>
+          <text className="input-label">Email</text>
           <input type="text" onChange={this.changeEmail}></input>
         </div>
         <button onClick={this.sendForm}>Send Forms</button>
