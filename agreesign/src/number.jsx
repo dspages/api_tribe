@@ -2,8 +2,27 @@
 import React, { Component } from 'react';
 import './number.css';
 import { Link } from 'react-router-dom';
+import question from './images/question.png';
+import gentlemannn from './images/gentlemannn.png';
+import sketchy from './images/sketchy.png';
 
 class NumberCheck extends Component{
+
+  constructor(){
+    super();
+    this.state = {img: question};
+    this.updatePicture = this.updatePicture.bind(this);
+    this.updateNumber = this.updateNumber.bind(this);
+  }
+
+  updatePicture(event){
+    this.setState({img: gentlemannn});
+  }
+
+  updateNumber(event){
+
+  }
+
   render(){
     return (
       <div className="window">
@@ -11,7 +30,7 @@ class NumberCheck extends Component{
           AgreeSign App
         </div>
         <div className="content-item">
-          <img src="./logo2.png" alt="" height="300px" width="300px"/>
+          <img src={this.state.img} alt="" height="300px" width="300px"/>
         </div>
         <div className="input-box">
           <label> Phone Number
@@ -19,7 +38,7 @@ class NumberCheck extends Component{
           </label>
         </div>
         <div className="interface">
-          <button className="interface-option">
+          <button className="interface-option" onClick={this.updatePicture}>
             Check number!
           </button>
           <Link to={`/contract`}>
