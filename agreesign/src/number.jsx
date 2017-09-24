@@ -2,9 +2,9 @@
 import React, { Component } from 'react';
 import './number.css';
 import { Link } from 'react-router-dom';
-import question from './images/question.png';
-import gentlemannn from './images/THUMBIUP.png';
-import sketchy from './images/THUMBDOWN.png';
+import question from './images/ENTER.png';
+import gentlemannn from './images/CLEAR.png';
+import sketchy from './images/CAUTION.png';
 import gigsign from './images/gigsignsignsign.png';
 import {phoneCheck} from './api_util.js';
 
@@ -20,10 +20,10 @@ class NumberCheck extends Component{
   updatePicture(event){
     phoneCheck(this.state.number).then(
       (response) => {
-        if (response === "safe")
-        {this.setState({img: gentlemannn});}
-        else
+        if (response.safety === "unsafe")
         {this.setState({img: sketchy});}
+        else
+        {this.setState({img: gentlemannn});}
       }
     );
 
