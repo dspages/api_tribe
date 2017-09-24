@@ -22,7 +22,7 @@ class NumberCheck extends Component{
           <button className="interface-option">
             Check number!
           </button>
-          <Link to={`/document`}>
+          <Link to={`/contract`}>
             <button className="interface-option">
               Move forward
             </button>
