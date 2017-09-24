@@ -22,7 +22,7 @@ class NumberCheck extends Component{
   updatePicture(event){
     phoneCheck(this.state.number).then(
       (response) => {
-        if (response.safety === "unsafe")
+        if (response.recommendation === "block")
         {this.setState({img: sketchy});}
         else
         {this.setState({img: gentlemannn});}
