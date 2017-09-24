@@ -25,10 +25,8 @@ html {
 
 .window {
   border: 5px solid black;
-  background: linear-gradient(to bottom right, #836036, #A38046);
-  background-image: url("./images/gigsignsignsign.png");
-  background-size: 100% 100%;
-  color: black;
+  background: linear-gradient(to bottom right, #222222, black);
+  color: white;
   width: 320px;
   height: 500px;
   border-radius: 20px;
@@ -36,6 +34,27 @@ html {
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
+}
+
+.splash{
+  border: 5px solid black;
+  background-image: url("./images/gigsignsignsign.png");
+  background-size: 100% 100%;
+  width: 320px;
+  height: 500px;
+  border-radius: 20px;
+}
+
+.vertical-menu {
+  width: 200px;
+  height: 150px;
+  overflow-y: auto;
+}
+
+.venue{
+  background-color: lightgrey;
+  padding: 10px;
+  list-style: none;
 }
 
 .content-item {
@@ -53,12 +72,13 @@ html {
 
 .interface-option {
   background-color: white;
+  border-color: #444444;
   color: black;
   border-radius: 5px;
 }
 
 .interface-option:hover {
-  background-color: #F3D066;
+  background-color: lightgrey;
   cursor: pointer;
 }
 

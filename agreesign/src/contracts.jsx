@@ -58,7 +58,7 @@ class Contract extends Component{
           <text className="input-label">Email</text>
           <input type="text" onChange={this.changeEmail}></input>
         </div>
-        <button onClick={this.sendForm}>Send Forms</button>
+        <button className="interface-option" onClick={this.sendForm}>Send Forms</button>
       </div>
     );
   }

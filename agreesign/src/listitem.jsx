@@ -20,7 +20,7 @@ import k_7 from './piano_keys/g.mp3';
 
 const SOUNDS = [k_1,k_2,k_3,k_4,k_5,k_6,k_7];
 
-const IMAGES = [a,b,c,d,e,l, dollarsign];
+const IMAGES = [a,b,c,d,e,l,dollarsign];
 
 const CONTRACT_TYPES =
 ["Artist Management Agreement",
