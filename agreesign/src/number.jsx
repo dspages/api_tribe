@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import './number.css';
 import { Link } from 'react-router-dom';
 import question from './images/question.png';
-import gentlemannn from './images/gentlemannn.png';
-import sketchy from './images/sketchy.png';
+import gentlemannn from './images/THUMBIUP.png';
+import sketchy from './images/THUMBDOWN.png';
 import gigsign from './images/gigsignsignsign.png';
 import {phoneCheck} from './api_util.js';
 
