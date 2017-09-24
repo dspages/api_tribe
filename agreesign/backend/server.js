@@ -26,6 +26,11 @@ app.get('/verify/:phoneNumber', (req, res) => {
   handlers.verify(req, res, phoneNumber);
 })
 
+app.get('/document/:docID', (req, res) => {
+  const docID = req.params.docID;
+  // handlers.
+})
+
 app.listen(3030, () => {
   console.log('hello')
 });
