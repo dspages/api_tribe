@@ -1,5 +1,6 @@
 const express = require('express');
 const fetch = require('node-fetch');
+const bodyParser = require('body-parser');
 
 const app = express();
 
@@ -11,6 +12,12 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
+
+app.use(bodyParser.json());
+
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
 // app.get('/v1/api/search/:keyword', (req, res) => {
 //   const keyword = req.params.keyword;
@@ -26,8 +33,8 @@ app.get('/verify/:phoneNumber', (req, res) => {
   handlers.verify(req, res, phoneNumber);
 })
 
-app.get('/document/:docID', (req, res) => {
-  const docID = req.params.docID;
+app.post('/document', (req, res) => {
+  handlers.document(req, res);
   // handlers.
 })
 
