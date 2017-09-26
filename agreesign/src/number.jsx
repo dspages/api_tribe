@@ -2,9 +2,9 @@
 import React, { Component } from 'react';
 import './number.css';
 import { Link } from 'react-router-dom';
-import question from './images/ENTER.png';
-import gentlemannn from './images/CLEAR.png';
-import sketchy from './images/CAUTION.png';
+import enter from './images/ENTER.png';
+import clear from './images/CLEAR.png';
+import caution from './images/CAUTION.png';
 import gigsign from './images/gigsignsignsign.png';
 import {phoneCheck} from './api_util.js';
 
@@ -14,7 +14,7 @@ class NumberCheck extends Component{
 
   constructor(){
     super();
-    this.state = {img: question, number: ""};
+    this.state = {img: clear, number: ""};
     this.updatePicture = this.updatePicture.bind(this);
     this.updateNumber = this.updateNumber.bind(this);
   }
@@ -24,9 +24,9 @@ class NumberCheck extends Component{
     phoneCheck(number).then(
       (response) => {
         if (number === "19999999999")
-        {this.setState({img: sketchy});}
+        {this.setState({img: caution});}
         else
-        {this.setState({img: gentlemannn});}
+        {this.setState({img: enter});}
       }
     );
 
